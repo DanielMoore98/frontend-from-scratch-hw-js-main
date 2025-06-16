@@ -15,8 +15,13 @@ includesElement([1, 2, 3], 2)  // должен вернуть `true`.
 
 const test = [1,2,3]
 function includesElement(array, element) {
-
-    return array.includes(element)
+    let bool = false
+    for (let i = 0; i<array.length; i++){
+        if (array[i] === element){
+            bool = true
+        }
+    }
+    return bool ? true : false
 }
 
-console.log(includesElement(test,4));
+console.log(includesElement(test,2));
