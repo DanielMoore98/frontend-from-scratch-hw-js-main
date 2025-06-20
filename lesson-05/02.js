@@ -35,4 +35,17 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery() {}
+function updateGallery(object, name, description) {
+  const keys = Object.keys(object)
+  const values = Object.values(object)
+  if (keys.includes(name)){
+    values.includes(description) ? null : object[name] = description
+  } else {
+    object[name]= description
+  }
+}
+
+updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506')
+updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dali')
+console.log(gallery);
+
